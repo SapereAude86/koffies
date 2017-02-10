@@ -2,6 +2,8 @@ package koffie;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -21,6 +23,7 @@ public class KoffieProbleem implements Runnable {
     private JButton nextButton = new JButton("next");
 
 
+//test
 
 
     private KoffieProbleem() throws IOException {
@@ -62,6 +65,16 @@ public class KoffieProbleem implements Runnable {
         JLabel label = new JLabel("test");
         toppanel.add(label);
         toppanel.add(nextButton);
+
+        nextButton.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                // display/center the jdialog when the button is pressed
+                System.out.println("werkt!");
+
+            }
+        });
 
 
 
